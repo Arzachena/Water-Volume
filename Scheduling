@@ -1,0 +1,19 @@
+Run webpage-graph.py at boot
+cd /home/pi && python3 webpage-graph.py
+Default behaviour
+At reboot
+
+Record Water Volume
+python3 record_water_volume.py
+X application
+Every minute
+
+Record Hour Average
+python3 record_hour_average.py
+X application
+Every hour
+
+Record Day Average
+python3 record_day_average.py
+X application
+Every day
