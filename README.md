@@ -13,4 +13,4 @@ Uses a Raspberry Pi and 3 Python modules to maintan an Sqlite database of measur
 
 4th module: uses Flask and Pygal to provide a web page showing zoomed and un-zoomed display of database contents.
 
-The whole project is a bit hack and slash i.e no exception handling.
+The whole project is a bit hack and slash i.e no exception handling, uses literals instead of constants.
