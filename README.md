@@ -7,9 +7,9 @@ Uses a Raspberry Pi and 3 Python modules to maintan an Sqlite database of measur
 
 1st module: Run by Cron every minute. Measures volume using GPIO in serial mode to interface with ultrasonic sensor. Stores volume readings in a table which uses triggers to make a FIFO queue.
 
-2nd module: Rub by Cron every hour. Calculates average volume during last hour. Stores average in a FIFO table.
+2nd module: Run by Cron every hour. Calculates average volume during last hour. Stores average in a FIFO table.
 
-3rd module: Rub by Cron every day. Calculates average volume during last day. Stores average in a FIFO table.
+3rd module: Run by Cron every day. Calculates average volume during last day. Stores average in a FIFO table.
 
 4th module: uses Flask and Pygal to provide a web page showing zoomed and un-zoomed display of database contents.
 
