@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <body>
+  <h3 align="center">Warning! You are about to clear ALL stored data</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <div>
+  <form action="" method="post" name="ConfirmDbDelete">
+	   {{ form.hidden_tag() }}
+		{{ form.confirm }}<br><br>
+		{{ form.cancel }}<br><br>
+  </form>
+    </div>
+</body>
+{% endblock %}

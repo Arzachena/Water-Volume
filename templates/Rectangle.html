@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <body>
+  <h3 align="center">Rectangular</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <div>
+  <form action="" method="post" name="Rectangle">
+          Please enter the dimensions:<br>
+            {{ form.hidden_tag() }}
+          {{ form.height.label }}{{ form.height(size=20) }}<br>
+{% for error in form.height.errors %}
+    {{ error }}<br>  
+{% endfor %}  
+          {{ form.length.label }}{{ form.length(size=20) }}<br>
+{% for error in form.length.errors %}
+    {{ error }}<br>  
+{% endfor %}  
+          {{ form.width.label }}{{ form.width(size=20) }}<br>
+{% for error in form.width.errors %}
+    {{ error }}<br>  
+{% endfor %}  
+          {{ form.units.label }}{{ form.units }}<br>
+		{{ form.submit }}<br><br>
+		{{ form.calculate }}<br>
+		Volume = {{ calculatedevolume }} {{ volumeunits }}<br>
+  </form>
+    </div>
+    <div>
+<img src="/static/Rectangular.png" class="img-fluid"  alt="Smiley face"">
+    </div>
+</body>
+{% endblock %}

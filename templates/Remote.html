@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <body>
+  <h3 align="center">Remote Access</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <div>
+  <form action="" method="post" name="Remote">
+	  Please enter the domain and token:<br>
+	   {{ form.hidden_tag() }}
+	  {{ form.domain.label }}{{ form.domain(size=35) }}<br>
+		{% for error in form.domain.errors %}
+			{{ error }}<br>  
+		{% endfor %}  
+	  {{ form.token.label }}{{ form.token(size=36) }}<br>
+		{% for error in form.token.errors %}
+			{{ error }}<br>  
+		{% endfor %}  
+		{{ form.test }}<br>
+		Test result = {{ testresult }}<br>
+		{{ form.submit }}<br><br>
+  </form>
+    </div>
+</body>
+{% endblock %}

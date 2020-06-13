@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/static/animate.css">
+    <link rel="stylesheet" href="/static/bootnavbar.css">
+
+    <title>Multi level hover dropdown Navbar for bootstrap 4</title>
+    <meta name="description" content="Multi level hover dropdown Navbar for bootstrap 4">
+    <meta name="keywords" content="Multi level hover dropdown Navbar for bootstrap 4">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+        <h3 class="navbar-brand" href="#">Water Volume</h3>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="CurrentVolume">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Graphs">Graphs <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Settings
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Configure Cistern
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="VertCyl">Vert. Cylinder</a></li>
+                                    <li><a class="dropdown-item" href="Rectangle">Rectangular</a></li>
+                                    <li><a class="dropdown-item" href="HorizCyl">Horiz. Cylinder</a></li>
+                                </ul>
+                         </li>          
+                         <li><a class="dropdown-item" href="#">Alerts</a></li>
+                         <li><a class="dropdown-item" href="#">Language</a></li>
+                        <li class="nav-item dropdown">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Advanced
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="Remote">Remote Access</a></li>
+                                    <li><a class="dropdown-item" href="#">Join Wifi</a></li>
+                                    <li><a class="dropdown-item" href="#">Join Ethernet</a></li>
+                                    <li><a class="dropdown-item" href="ClearHistory">Clear History</a></li>
+                                </ul>
+                         </li>          
+                  </ul>
+               </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Help <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script src="/static/jquery-3.3.1.min.js"></script>
+    <script src="/static/popper.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/bootnavbar.js" ></script>
+    <script>
+        $(function () {
+            $('#main_navbar').bootnavbar();
+        })
+    </script>
+		{% block body %}
+		{% endblock %}
+</body>
+
+</html>

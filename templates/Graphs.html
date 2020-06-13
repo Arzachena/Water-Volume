@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+    <body>
+		<form method="POST">
+            <div class="input">
+                <div class="submit">
+                <button type="submit" class="btn btn-primary btn-lg" name="submit_button" value="Last 60 Minutes">Last 60 Minutes</button>
+                <button type="submit" class="btn btn-primary btn-lg" name="submit_button" value="Last 24 hours">Last 24 hours</button> 
+                <button type="submit" class="btn btn-primary btn-lg" name="submit_button" value="Last 30 days">Last 30 days</button>           
+                {{ ZoomText|safe }}          
+                </div>          
+            </div>
+        </form>
+<!--        <object>
+            {{ chart|safe  }}
+        </object>-->
+        <div>
+            <img type="image/svg+xml" src={{ chart|safe  }} class="img-fluid" alt="Smiley face">
+        </div>
+    </body>
+{% endblock %}
+

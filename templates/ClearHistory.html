@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <body>
+  <h3 align="center">Clear History</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <div>
+  <form action="" method="post" name="ClearHistory">
+	   {{ form.hidden_tag() }}
+		{{ form.deletehistory }}<br><br>
+		{{ form.deletedb }}<br><br>
+  </form>
+    </div>
+</body>
+{% endblock %}

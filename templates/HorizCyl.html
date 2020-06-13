@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <body>
+  <h3 align="center">Horizontal Cylinder</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <div>
+  <form action="" method="post" name="HorizCyl">
+	  Please enter the dimensions:<br>
+	   {{ form.hidden_tag() }}
+	  {{ form.length.label }}{{ form.length(size=20) }}<br>
+		{% for error in form.length.errors %}
+			{{ error }}<br>  
+		{% endfor %}  
+	  {{ form.diameter.label }}{{ form.diameter(size=20) }}<br>
+		{% for error in form.diameter.errors %}
+			{{ error }}<br>  
+		{% endfor %}  
+	  {{ form.units.label }}{{ form.units }}<br>
+		{{ form.submit }}<br><br>
+		{{ form.calculate }}<br>
+		Volume = {{ calculatedevolume }} {{ volumeunits }}<br>
+  </form>
+    </div>
+    <div>
+      <img src="/static/Horizontal Cylinder.png" class="img-fluid"  alt="Smiley face">
+    </div>
+</body>
+{% endblock %}
