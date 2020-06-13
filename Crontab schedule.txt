@@ -1,0 +1,5 @@
+@reboot python3 /home/pi/webpage-graph.py &
+* * * * *  python3 /home/pi/record_water_volume.py &
+0 * * * *  python3 /home/pi/record_hour_average.py &
+0 0 * * *  python3 /home/pi/record_day_average.py &
+*/5 * * * * python3 /home/pi/duckdns.py &

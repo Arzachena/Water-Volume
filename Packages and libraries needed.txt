@@ -1,0 +1,8 @@
+sqlitebrowser
+Flask
+Flask-WTF
+requests
+WTForms
+pygal
+
+
