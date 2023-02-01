@@ -5,7 +5,7 @@ Uses https://www.amazon.co.uk/ARCELI-Waterproof-Ultrasonic-Measuring-Transducer/
 
 Uses a Raspberry Pi and 3 Python modules to maintan an Sqlite database of measurements. 4th module uses Flask and Pygal to provide a web page showing zoomed and un-zoomed display of database contents.
 
-1st module: Run by Cron every minute. Measures volume using GPIO in serial mode to interface with ultrasonic sensor. Stores volume readings in a table which uses triggers to make a FIFO queue.
+1st module: Run by Cron every minute. Measures volume using GPIO in serial mode to interface with ultrasonic sensor. Stores volume readings in a table which uses triggers to make a FIFO queue. Also sends a data pair (data={"Volume": volume}) in Json format to a literal IP:Port.
 
 2nd module: Run by Cron every hour. Calculates average volume during last hour. Stores average in a FIFO table.
 
@@ -16,3 +16,5 @@ Uses a Raspberry Pi and 3 Python modules to maintan an Sqlite database of measur
 There is also a module which updates DuckDNS with the current web address so that the graphs can be seen from outside the local network.
 
 The whole project is a bit hack and slash i.e no exception handling, uses literals instead of constants.
+
+Note that an update is pending which has an improved user interface on the web page which allows things such as IP:Port parameters to be configured.
